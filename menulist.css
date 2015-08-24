@@ -1,0 +1,24 @@
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li:after {
+  content: '|';
+  margin: 0 10px;
+}
+
+.menu ul li:last-child:after {
+  content: '';
+}
+
+.active {
+  color: #ff0000; 
+  font-weight: bold; 
+  text-decoration: underline;
+}
