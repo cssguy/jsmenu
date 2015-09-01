@@ -1,6 +1,6 @@
 window.onload = function() {
 
-var menuData = [{name: "item1"}, {name: "item2"}, {name: "item3"}];
+var menuData = [{name: "item1", conent: "tab1"}, {name: "item2", conent: "tab2"}, {name: "item3", conent: "tab3"}];
 
 var ul = document.createElement("ul");
 
@@ -16,11 +16,25 @@ for (var i=0; i < menuData.length; i++) {
 var menu = document.getElementsByClassName("menu");
 menu[0].appendChild(ul);
 
+var activeItem = null;
+
 for (i = 0; i < menuData.length; i++) {
 
-  ul.childNodes[i].onclick = function(){
+  var tmpLi = ul.childNodes[i];
+
+  tmpLi.onclick = function(){
+
+    if (activeItem != null) {
+      
+      activeItem.classList.remove("active");
+    }
+
+    activeItem = this;
     this.setAttribute("class", "active");
+
+    
   }
+
 }
 
 }
