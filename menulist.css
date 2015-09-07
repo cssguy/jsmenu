@@ -6,11 +6,16 @@
 
 .menu ul li {
   display: inline-block;
+  margin: 0 10px;
+  position: relative;
 }
 
-.menu ul li:after {
-  content: '|';
-  margin: 0 10px;
+.menu ul li div {
+  display: none;
+  position: absolute;
+  color: yellow;
+  background: green;
+  font-weight: normal;
 }
 
 .menu ul li:last-child:after {
@@ -18,7 +23,7 @@
 }
 
 .active {
-  color: #ff0000; 
+  color: red; 
   font-weight: bold; 
   text-decoration: underline;
 }
